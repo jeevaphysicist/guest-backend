@@ -18,7 +18,7 @@ const paymentroutes =  require('./routes/paymentroutes');
 dotenv.config();
 
 // Port No for server connection
-const PORT = process.env.PORT ||  9090;
+const PORT = process.env.PORT || 9090;
 
 // server created
 const app = express();
@@ -40,6 +40,9 @@ app.use(bodyParser.json({limit:"50mb"}));
 app.use(CookieParser());
 
 // API paths
+app.get("/",(req,res)=>{
+       res.send("server working fine!!!");
+})
 app.use("/api/auth",authroutes);
 app.use("/api/house",houseroutes);
 app.use("/api/room",roomroutes);
