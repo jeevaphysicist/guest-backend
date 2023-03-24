@@ -35,7 +35,7 @@ mongoose.connection.on("disconnected",()=>{
 
 
 // middlewares 
-app.use(cors({ origin: 'http://localhost:3000', credentials: true, exposedHeaders: ['Set-Cookie', 'Date', 'ETag'] }));
+app.use(cors({ origin: 'https://guest-room-booking.onrender.com/', credentials: true, exposedHeaders: ['Set-Cookie', 'Date', 'ETag'] }));
 app.use(bodyParser.json({limit:"50mb"}));
 app.use(CookieParser());
 
