@@ -18,7 +18,7 @@ const paymentroutes =  require('./routes/paymentroutes');
 dotenv.config();
 
 // Port No for server connection
-const PORT = 9090;
+const PORT = process.env.PORT ||  9090;
 
 // server created
 const app = express();
